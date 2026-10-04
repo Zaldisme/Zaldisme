@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayStation Gaming Hub</title>
+<style>
+/* Base Styles & Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #0d1117;
+    color: #f0f6fc;
+    line-height: 1.6;
+}
+/* Header & Navigation */
+header {
+    background-color: #161b22;
+    padding: 20px 0;
+    border-bottom: 3px solid #00439c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0072ce;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+nav a {
+    color: #f0f6fc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #0072ce;
+}
+/* Hero Banner */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.hero p {
+    font-size: 20px;
+    color: #8b949e;
+    max-width: 600px;
+}
+/* Main Content Layout */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+section {
+    margin-bottom: 60px;
+}
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 80%;
+    width: 5px;
+    background-color: #0072ce;
+    border-radius: 2px;
+}
+/* Game Grid & Cards */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.game-card {
+    background-color: #161b22;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 72, 206, 0.2);
+}
+.game-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #30363d;
+}
+.game-info {
+    padding: 20px;
+}
+.platform-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.badge-ps4 {
+    background-color: #003791;
+    color: white;
+}
+.badge-ps5 {
+    background-color: #ffffff;
+    color: #003791;
+}
+.game-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+.game-meta {
+    font-size: 14px;
+    color: #8b949e;
+}
+/* Footer */
+footer {
+    background-color: #161b22;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+    font-size: 14px;
+}
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header Navigation -->
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">🎮 PS NEXUS</a>
+        <nav>
+            <ul>
+                <li><a href="#ps4">PS4 Games</a></li>
+                <li><a href="#ps5">Upcoming PS5</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Banner -->
+<div class="hero">
+    <h1>Your Ultimate PlayStation Source</h1>
+    <p>Explore current generation hits and preview the next generation of highly anticipated blockbusters.</p>
+</div>
+
+<!-- Main Content Container -->
+<div class="container">
+    <!-- PS4 Section -->
+    <section id="ps4">
+        <h2>Popular PS4 Games</h2>
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BNjJiNTFhY2QtNzZkYi00MDNiLWEzNGEtNWE1NzBkOWIxNmY5XkEyXkFqcGc@._V1_.jpg">
+                <div class="game-info">
+                    <span class="platform-badge badge-ps4">PS4</span>
+                    <h3 class="game-title">God of War</h3>
+                    <p class="game-meta">Genre: Action-Adventure</p>
+                    <p class="game-meta">Released: 2018</p>
+                </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz-HykB-aw34MvqevmRt85CsF1oHCT-wpjrKwVe3MiHQ&s=10">
+                <div class="game-info">
+                    <span class="platform-badge badge-ps4">PS4</span>
+                    <h3 class="game-title">The Last of Us Part II</h3>
+                    <p class="game-meta">Genre: Survival Horror</p>
+                    <p class="game-meta">Released: 2020</p>
+                </div>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3eV6iFUt6Z1sQTUSV2bcbDkBZYqT5bOFPPhjvte0_Q&s=10">
+                <div class="game-info">
+                    <span class="platform-badge badge-ps4">PS4</span>
+                    <h3 class="game-title">Ghost of Tsushima</h3>
+                    <p class="game-meta">Genre: Open World / Action</p>
+                    <p class="game-meta">Released: 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PS5 Section -->
+    <section id="ps5">
+        <h2>Upcoming PS5 Games</h2>
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <div class="game-card">
+                <img src="https://cdna.artstation.com/p/assets/images/images/092/247/914/large/bat-knight-channel-marvel-swolverine-coverartwallpaper03.webp?1759124295" alt="Wolverine">
+                <div class="game-info">
+                    <span class="platform-badge badge-ps5">PS5 Exclusive</span>
+                    <h3 class="game-title">Wolverine</h3>
+                    <p class="game-meta">Genre: Action-Adventure</p>
+                    <p class="game-meta">Expected: In Development</p>
+                </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlQmpouk5_Wt8ma8IirNTaT_Ds5Laqp57IaRwu6eEm2g&s=10">
+                <div class="game-info">
+                    <span class="platform-badge badge-ps5">PS5</span>
+                    <h3 class="game-title">Death Stranding 2</h3>
+                    <p class="game-meta">Genre: Sci-Fi / Action</p>
+                    <p class="game-meta">Expected: Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 PlayStation Gaming Hub. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
